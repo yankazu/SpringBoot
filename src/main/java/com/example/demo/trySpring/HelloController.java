@@ -43,7 +43,7 @@ public class HelloController {
 
 
 		// helloResponseDB.htmlに画面遷移
-		return "helloResponse";
+		return "helloResponseDB";
 	}
 
 

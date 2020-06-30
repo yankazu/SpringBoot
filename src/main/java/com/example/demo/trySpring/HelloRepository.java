@@ -9,16 +9,17 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class HelloRepository {
 
-@Autowired
-private JdbcTemplate jdbcTemplate;
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
 
-public Map<String,Object>findOne(int id){
+	public Map<String,Object>findOne(int id){
 
-	String query = "SELECT"
+	// SELECT文
+	String query = "SELECT "
 		+ "employee_id,"
-		+ "employee_name"
-		+ "name"
-		+ "FROM employee"
+		+ "employee_name,"
+		+ "age "
+		+ "FROM employee "
 		+ "WHERE employee_id=?";
 
 	Map<String,Object>employee = jdbcTemplate.queryForMap(query,id);
